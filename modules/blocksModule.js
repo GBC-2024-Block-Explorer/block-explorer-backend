@@ -22,14 +22,22 @@ const getAddresses = () => {
   return ethereumAddresses;
 };
 
+const getBlock = () => {
+  return ethereumBlocks;
+};
+
 const getDetail = (address) => {
   return ethereumBlocks.find((block) => block.address === address);
 };
 
+// const address = ethereumAddresses[4];
+// console.log(address);
+// console.log("bal",(ethereumBlocks.find((block) => block.address === address)).balance)
 // console.log("getDetail", getDetail("0xlll"));
 // console.log("getAddress", getAddresses());
 
 module.exports = {
   getAddresses,
   getDetail,
+  getBlock,
 };

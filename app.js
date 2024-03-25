@@ -6,6 +6,11 @@ const app = express();
 var cors = require("cors");
 app.use(cors())
 
+app.get("/blocks/block", (req, res) => {
+  const block = blocksModule.getBlock();
+  res.json(block);
+});
+
 app.get("/blocks/addresses", (req, res) => {
   const blockAddresses = blocksModule.getAddresses();
   res.json(blockAddresses);
